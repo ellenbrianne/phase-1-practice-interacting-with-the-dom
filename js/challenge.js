@@ -9,3 +9,15 @@ form.addEventListener("submit", (e) => {
     li.textContent = comments
     document.querySelector("#list").appendChild(li)
 });
+
+// Counter function w/setInterval
+
+let counterDisplay = document.querySelector("h1#counter");
+
+let counter = 0;
+
+setInterval(() => {
+    counter++
+    counterDisplay.textContent = counter
+}, 1000);
+
