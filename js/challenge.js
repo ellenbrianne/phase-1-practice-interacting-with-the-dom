@@ -8,6 +8,7 @@ form.addEventListener("submit", (e) => {
     let li = document.createElement("li")
     li.textContent = comments
     document.querySelector("#list").appendChild(li)
+    form.reset();
 });
 
 // Counter function w/setInterval
@@ -21,3 +22,16 @@ setInterval(() => {
     counterDisplay.textContent = counter
 }, 1000);
 
+// Manually inc/decrement counter w/buttons
+
+let plus = document.getElementById("plus");
+
+plus.addEventListener("click", (e) => {
+    counterDisplay.textContent++;
+});
+
+let minus = document.getElementById("minus");
+
+minus.addEventListener("click", (e) => {
+    counterDisplay.textContent--;
+});
