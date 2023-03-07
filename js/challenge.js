@@ -35,3 +35,14 @@ let minus = document.getElementById("minus");
 minus.addEventListener("click", (e) => {
     counterDisplay.textContent--;
 });
+
+// Like button for numbers & log of liked numbers
+
+let liker = document.getElementById("heart");
+
+liker.addEventListener("click", (e) => {
+    let li = document.createElement("li")
+    li.textContent = `Number ${counterDisplay.textContent} has been liked.`
+    let ul = document.querySelector("ul.likes").appendChild(li)
+});
+
